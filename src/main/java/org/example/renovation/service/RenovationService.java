@@ -50,7 +50,6 @@ public class RenovationService {
 				.setName(renovation.getName())
 				.setHeight(Integer.toString(value1))
 				.setWidth(Integer.toString(value2))
-				.setLength(Integer.toString(value3))
 				.setActive(renovation.isActive())
 				.setLastEditDate(renovation.getLastEditDate().toString())
 				.setVolume(renovation.getVolume())
@@ -77,7 +76,6 @@ public class RenovationService {
 	private static boolean validateRenovationDTO(RenovationDTO renovationDTO) {
 		return renovationDTO.getName().isBlank() && renovationDTO.getName() == null &&
 				renovationDTO.getWidth().isBlank() && renovationDTO.getWidth() == null &&
-				renovationDTO.getLength().isBlank() && renovationDTO.getLength() == null &&
 				renovationDTO.getHeight().isBlank() && renovationDTO.getHeight() == null;
 	}
 
@@ -85,9 +83,7 @@ public class RenovationService {
 		String dimensions = "";
 		if (validateDimension(renovationDTO.getHeight()) && validateDimension(renovationDTO.getWidth())) {
 			dimensions = renovationDTO.getWidth() + " |/ " + renovationDTO.getHeight();
-			if (validateDimension(renovationDTO.getLength())) {
-				return dimensions + " || " + renovationDTO.getLength();
-			}
+
 			return dimensions;
 		}
 

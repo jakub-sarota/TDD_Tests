@@ -85,7 +85,6 @@ public class RenovationRepository {
 				preparedStatement.setString(1, renovation.getName());
 				preparedStatement.setString(2, renovation.getDimensions());
 				preparedStatement.setBoolean(3, renovation.isActive());
-				preparedStatement.setDouble(4, calculateVolume(renovation.getDimensions()));
 				preparedStatement.setDouble(5, calculateField(renovation.getDimensions()));
 				preparedStatement.setDate(6, Date.valueOf(LocalDate.now()));
 
@@ -112,11 +111,7 @@ public class RenovationRepository {
 		}
 	}
 
-	private static double calculateVolume(String volume) {
-		return ShapeCalculator.shapeCalculator(volume, true);
-	}
-
 	private static double calculateField(String volume) {
-		return ShapeCalculator.shapeCalculator(volume, false);
+		return ShapeCalculator.shapeCalculator(volume, true);
 	}
 }

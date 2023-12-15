@@ -9,7 +9,7 @@ class ShapeCalculatorTest {
 	@Test
 	void when_calculatingVolumeWithValidDimensions_then_returnCorrectValue() {
 		// Given
-		String dimensions = "10|/5|/8";
+		String dimensions = "10 |/ 5 || 8";
 
 		// When
 		double calculatedVolume = ShapeCalculator.shapeCalculator(dimensions, true);
@@ -22,7 +22,7 @@ class ShapeCalculatorTest {
 	@Test
 	void when_calculatingFieldWithValidDimensions_then_returnCorrectValue() {
 		// Given
-		String dimensions = "10|/5|/8";
+		String dimensions = "10 |/ 5 || 8";
 
 		// When
 		double calculatedField = ShapeCalculator.shapeCalculator(dimensions, false);

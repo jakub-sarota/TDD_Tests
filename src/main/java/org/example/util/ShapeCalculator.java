@@ -11,7 +11,6 @@ public class ShapeCalculator {
 
 		int value1 = 0;
 		int value2 = 0;
-		int value3 = 0;
 
 		int index = 0;
 		while (matcher.find() && index < 3) {
@@ -23,17 +22,11 @@ public class ShapeCalculator {
 				case 1:
 					value2 = currentValue;
 					break;
-				case 2:
-					value3 = currentValue;
-					break;
 			}
 			index++;
 		}
 
-		if(isValue) {
-			return value1 * value2 * value3;
-		}
 
-		return 2 * (value1 * value2 + value2 * value3 + value3 * value1);
+		return value1 * value2;
 	}
 }

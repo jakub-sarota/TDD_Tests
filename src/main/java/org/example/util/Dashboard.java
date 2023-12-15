@@ -49,7 +49,6 @@ public class Dashboard {
 						.setName(name)
 						.setWidth(width)
 						.setHeight(height)
-						.setLength(length)
 						.build();
 
 				RenovationService.addRenovation(renovationDTO);
