@@ -5,7 +5,6 @@ public class RenovationDTO {
 	private String name;
 	private String height;
 	private String width;
-	private String length;
 	private boolean active;
 	private String volume;
 	private String field;
@@ -16,7 +15,6 @@ public class RenovationDTO {
 		return "\nNazwa: " + name + '\n' +
 				"Wysokość: " + height + '\n' +
 				"Szerokość: " + width + '\n' +
-				"Długość: " + length + '\n' +
 				"Czy aktywny: " + active + '\n' +
 				"Data ostatniej edycji: " + lastEditDate + '\n' +
 				"Objętość: " + volume + '\n' +
@@ -45,14 +43,6 @@ public class RenovationDTO {
 
 	public void setWidth(String width) {
 		this.width = width;
-	}
-
-	public String getLength() {
-		return length;
-	}
-
-	public void setLength(String length) {
-		this.length = length;
 	}
 
 	public boolean isActive() {
@@ -91,7 +81,6 @@ public class RenovationDTO {
 		private String name;
 		private String height;
 		private String width;
-		private String length;
 		private boolean active;
 		private String lastEditDate;
 		private String volume;
@@ -111,11 +100,6 @@ public class RenovationDTO {
 
 		public Builder setWidth(String width) {
 			this.width = width;
-			return this;
-		}
-
-		public Builder setLength(String length) {
-			this.length = length;
 			return this;
 		}
 
@@ -144,7 +128,6 @@ public class RenovationDTO {
 			renovationDTO.setName(name);
 			renovationDTO.setHeight(height);
 			renovationDTO.setWidth(width);
-			renovationDTO.setLength(length);
 			renovationDTO.setActive(active);
 			renovationDTO.setLastEditDate(lastEditDate);
 			renovationDTO.setVolume(volume);
